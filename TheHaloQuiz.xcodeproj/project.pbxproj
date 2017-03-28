@@ -13,6 +13,7 @@
 		ACE85B5C1E89E257001FF452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE85B5B1E89E257001FF452 /* Assets.xcassets */; };
 		ACE85B5F1E89E257001FF452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE85B5D1E89E257001FF452 /* LaunchScreen.storyboard */; };
 		ACE85B671E89E923001FF452 /* QuizData.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACE85B661E89E923001FF452 /* QuizData.plist */; };
+		ACEEFA0D1E8B05E4000E499F /* EventProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEEFA0C1E8B05E4000E499F /* EventProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ACE85B5E1E89E257001FF452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE85B601E89E257001FF452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACE85B661E89E923001FF452 /* QuizData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizData.plist; sourceTree = "<group>"; };
+		ACEEFA0C1E8B05E4000E499F /* EventProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				ACE85B541E89E257001FF452 /* AppDelegate.swift */,
 				ACE85B561E89E257001FF452 /* ViewController.swift */,
+				ACEEFA0C1E8B05E4000E499F /* EventProvider.swift */,
 				ACE85B581E89E257001FF452 /* Main.storyboard */,
 				ACE85B5B1E89E257001FF452 /* Assets.xcassets */,
 				ACE85B5D1E89E257001FF452 /* LaunchScreen.storyboard */,
@@ -99,6 +102,7 @@
 				TargetAttributes = {
 					ACE85B501E89E257001FF452 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 42DJD2F3FM;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -141,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE85B571E89E257001FF452 /* ViewController.swift in Sources */,
+				ACEEFA0D1E8B05E4000E499F /* EventProvider.swift in Sources */,
 				ACE85B551E89E257001FF452 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42DJD2F3FM;
 				INFOPLIST_FILE = TheHaloQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = torpedoskyline.TheHaloQuiz;
@@ -274,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42DJD2F3FM;
 				INFOPLIST_FILE = TheHaloQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = torpedoskyline.TheHaloQuiz;
@@ -301,6 +308,7 @@
 				ACE85B651E89E257001FF452 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

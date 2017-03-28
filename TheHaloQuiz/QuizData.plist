@@ -1,14 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   QuizData.plist
-   TheHaloQuiz
-
-   Created by TJ Barber on 3/27/17.
-   Copyright (c) 2017 TJ Barber. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>description</key>
+		<string>The Battle of Installation 05 begins</string>
+		<key>year</key>
+		<real>2552.93</real>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>John-117 is stranded in the hanger of the UNSC Forward Unto Dawn.</string>
+		<key>year</key>
+		<real>2552.95</real>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The Arbiter kills the Prophet of Truth.</string>
+		<key>year</key>
+		<real>2552.94</real>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>After over four years of drifting, John-117 wakes up from cryo sleep.</string>
+		<key>year</key>
+		<integer>2557</integer>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Jul &apos;Mdama is killed by Jameson Locke in order to rescue Catherine Halsey</string>
+		<key>year</key>
+		<integer>2558</integer>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The Battle of Onyx begins.</string>
+		<key>year</key>
+		<real>2552.92</real>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The High Prophet of Regret&apos;s fleet arrives at Earth.</string>
+		<key>year</key>
+		<real>2552.91</real>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The UNSC Pillar of Autumn arrives at Alpha Halo.</string>
+		<key>year</key>
+		<real>2552.9</real>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2552.8</real>
+		<key>description</key>
+		<string>Reach is glassed.</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2549</real>
+		<key>description</key>
+		<string> Cortana is created from Dr. Catherine Halsey&apos;s flash-cloned brain.</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2547.7</real>
+		<key>description</key>
+		<string>The Rookie joins the UNSC Marine Corp.</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2547.5</real>
+		<key>description</key>
+		<string>ONI Section Two publicly unveils the SPARTAN-II Program in order to boost morale.</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2542</real>
+		<key>description</key>
+		<string>MJOLNIR Mark V Armor is produced.</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2534</real>
+		<key>description</key>
+		<string>UNSC declares the UNSC Spirit of Fire and its crew KIA.</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2530</real>
+		<key>description</key>
+		<string>Kat-320 is born on Monastir, New Harmony.</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Edward Buck enlists in the UNSC Marine Corps.</string>
+		<key>year</key>
+		<integer>2528</integer>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2526</real>
+		<key>description</key>
+		<string>The WINTER CONTINGENCY protocol is enacted by the UNSC.</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Humanity comes into contact with the Covenant for the first time.</string>
+		<key>year</key>
+		<integer>2525</integer>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Emile-A239 is born on Luxor, Eridanus II.</string>
+		<key>year</key>
+		<string>2523.3</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2523.7</real>
+		<key>description</key>
+		<string>Spartan-IIs train on Reach, where they successfully capture a Marine base flag.</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2515</real>
+		<key>description</key>
+		<string>Dr. Catherine Halsey becomes scientific advisor in the Office of Naval Intelligence.</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The Covenant discover the Unggoy homeworld, Balaho.</string>
+		<key>year</key>
+		<integer>2142</integer>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Humans settle on Luna, Mars, the Jovian Moons, and asteroids.</string>
+		<key>year</key>
+		<integer>2080</integer>
+	</dict>
+	<dict>
+		<key>year</key>
+		<real>2021</real>
+		<key>description</key>
+		<string>The International Society of Civil Engineers is established on Earth.</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2557</integer>
+		<key>description</key>
+		<string>The UNSC Infinity is officially commissioned.</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Following the war against the Covenant, the SPARTAN-IV Program is greenlit.</string>
+		<key>year</key>
+		<real>2553</real>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>John-117 is born in Elysium City on Eridanus II.</string>
+		<key>year</key>
+		<integer>2511</integer>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>The ORION Project is re-initiated. </string>
+		<key>year</key>
+		<integer>2491</integer>
+	</dict>
+</array>
 </plist>

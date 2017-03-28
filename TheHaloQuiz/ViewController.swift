@@ -15,8 +15,19 @@ class ViewController: UIViewController {
     @IBOutlet var actionButtons: [UIButton]!
     @IBOutlet weak var instructionText: UILabel!
     
-    var events = ["Destruction of the first Halo installation", "Cortana's Death", "UNSC recovers the Master Chief", "The Covenant attacks Earth"]
+    let eventProvider: HaloEventProvider
+
+    required init?(coder aDecoder: NSCoder) {
+        do {
+            self.eventProvider = try HaloEventProvider()
+        } catch (let error) {
+            fatalError("\(error)")
+        }
+        super.init(coder: aDecoder)
+    }
     
+    // create initializer that loads HaloEventProvider
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,52 +42,43 @@ class ViewController: UIViewController {
         startButton.isHidden = true
         startButton.isUserInteractionEnabled = false
         instructionText.isHidden = false
-        
-        
+
+
         for label in questionLabels {
             label.isHidden = false
         }
-        
+
         for button in actionButtons {
             button.isHidden = false
             button.isUserInteractionEnabled = true
         }
-        
+
         updateEvents()
     }
 
     @IBAction func moveEvent(_ sender: UIButton) {
         switch sender.tag {
-            case 0, 1: rearrangeEventsBySwapping(index: 0, and: 1)
-            case 2, 3: rearrangeEventsBySwapping(index: 1, and: 2)
-            case 4, 5: rearrangeEventsBySwapping(index: 2, and: 3)
+            case 0, 1: eventProvider.rearrangeEventsBySwapping(firstEvent: 0, andSecondEvent: 1)
+            case 2, 3: eventProvider.rearrangeEventsBySwapping(firstEvent: 1, andSecondEvent: 2)
+            case 4, 5: eventProvider.rearrangeEventsBySwapping(firstEvent: 2, andSecondEvent: 3)
             default: fatalError("Hit a button that doesn't have a tag or one we don't expect")
         }
+
+        updateEvents()
     }
-    
+
     func updateEvents() {
         var index = 0
-        
+
         for label in questionLabels {
-            label.text = events[index]
+            label.text = eventProvider.currentEventSet[index].description
             index += 1
         }
     }
-    
-    func rearrangeEventsBySwapping(index firstIndex: Int, and secondIndex: Int) {
-        let event1 = events[firstIndex]
-        let event2 = events[secondIndex]
-        
-        events[secondIndex] = event1
-        events[firstIndex] = event2
-        
-        updateEvents()
-    }
-    
+
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if (motion == .motionShake) {
-            print("works")
+            print(eventProvider.isOrderCorrect())
         }
     }
 }
-
