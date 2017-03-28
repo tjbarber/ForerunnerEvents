@@ -38,5 +38,8 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func moveEvent(_ sender: UIButton) {
+        print(sender)
+    }
 }
 

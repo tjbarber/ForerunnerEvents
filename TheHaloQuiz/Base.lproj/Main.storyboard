@@ -123,6 +123,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" backgroundImage="up_full"/>
+                                <connections>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOl-dD-EiP"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6H-M5-Kcm" userLabel="Down">
                                 <rect key="frame" x="301" y="170" width="38" height="45"/>
@@ -133,6 +136,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" backgroundImage="up_half"/>
+                                <connections>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VaO-6k-kKO"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJt-nJ-1GI" userLabel="Down">
                                 <rect key="frame" x="301" y="215" width="38" height="45"/>
@@ -143,6 +149,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" backgroundImage="down_half"/>
+                                <connections>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apq-Zx-fzu"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpd-Zb-tBO" userLabel="Down">
                                 <rect key="frame" x="301" y="280" width="38" height="45"/>
@@ -153,6 +162,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" backgroundImage="up_half"/>
+                                <connections>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HXB-do-Qay"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ko-ga-T2v" userLabel="Down">
                                 <rect key="frame" x="301" y="325" width="38" height="45"/>
@@ -163,6 +175,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" backgroundImage="down_half"/>
+                                <connections>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISi-5t-P90"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U9-R2-8Sz" userLabel="Down">
                                 <rect key="frame" x="301" y="60" width="38" height="90"/>
@@ -173,6 +188,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" backgroundImage="down_full"/>
+                                <connections>
+                                    <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TR9-EQ-TE2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Eb-qDz">
                                 <rect key="frame" x="152" y="318.5" width="70" height="30"/>
