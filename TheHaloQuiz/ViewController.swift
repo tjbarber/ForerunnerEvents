@@ -14,16 +14,28 @@ class ViewController: UIViewController {
     @IBOutlet var questionLabels: [UILabel]!
     @IBOutlet var actionButtons: [UIButton]!
     @IBOutlet weak var instructionText: UILabel!
-    
+    @IBOutlet weak var nextButton: UIButton!
+
     let eventProvider: HaloEventProvider
+    let correctButtonImage: UIImage?
+    let incorrectButtonImage: UIImage?
+    let roundsPerGame: Int = 6
+    
+    var currentRound: Int = 1
+    var correctAnswers: Int = 0
 
     required init?(coder aDecoder: NSCoder) {
+        
         do {
-            self.eventProvider = try HaloEventProvider()
+            self.eventProvider = try HaloEventProvider(withEventFile: "EventData", ofType: "plist")
+            self.correctButtonImage = UIImage(named: "next_round_success")
+            self.incorrectButtonImage = UIImage(named: "next_round_fail")
         } catch (let error) {
             fatalError("\(error)")
         }
+        
         super.init(coder: aDecoder)
+        
     }
     
     // create initializer that loads HaloEventProvider
@@ -42,8 +54,7 @@ class ViewController: UIViewController {
         startButton.isHidden = true
         startButton.isUserInteractionEnabled = false
         instructionText.isHidden = false
-
-
+        
         for label in questionLabels {
             label.isHidden = false
         }
@@ -66,7 +77,26 @@ class ViewController: UIViewController {
 
         updateEvents()
     }
-
+    
+    @IBAction func startNextRound(_ sender: Any) {
+        if currentRound == roundsPerGame {
+            print("game over")
+        } else {
+            do {
+                eventProvider.currentEventSet = try eventProvider.prepareNewEventSet()
+                currentRound += 1
+                updateEvents()
+                
+                nextButton.isHidden = true
+                nextButton.isUserInteractionEnabled = false
+                
+                instructionText.isHidden = false
+            } catch (let description) {
+                fatalError("\(description)")
+            }
+        }
+    }
+    
     func updateEvents() {
         var index = 0
 
@@ -75,10 +105,29 @@ class ViewController: UIViewController {
             index += 1
         }
     }
+    
+    func toggleDisplayOf(_ view: UIControl) {
+        view.isHidden = !(view.isHidden)
+        view.isUserInteractionEnabled = !(view.isUserInteractionEnabled)
+    }
+    
+    func displayScore() {
+        
+    }
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if (motion == .motionShake) {
-            print(eventProvider.isOrderCorrect())
+            instructionText.isHidden = true
+            
+            if eventProvider.isOrderCorrect() {
+                correctAnswers += 1
+                nextButton.setBackgroundImage(correctButtonImage, for: .normal)
+            } else {
+                nextButton.setBackgroundImage(incorrectButtonImage, for: .normal)
+            }
+            
+            nextButton.isHidden = false
+            nextButton.isUserInteractionEnabled = true
         }
     }
 }

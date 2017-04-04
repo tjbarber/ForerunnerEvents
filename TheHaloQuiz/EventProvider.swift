@@ -11,56 +11,55 @@ import GameKit
 
 enum DataError : Error {
     case unableToShuffleData
+    case unableToFindFile
+    case unableToConvertStringToArray
 }
 
-// enum EventCategory {
-//   .gameHistory
-//   .
-// }
-
-protocol Event {
-    var description: String { get }
-    //var category: EventCategory // come back to this
-    var year: Int { get }
-   // var link: URL { get }
+struct Event {
+    var description: String
+    var year: Float
 }
 
 protocol EventDataProvider {
     var currentEventSet: [Event] { get set }
-    var correctEventOrderByYear: [Int] { get set }
+    var correctEventOrderByYear: [Float] { get set }
     var totalEventSet: [Event] { get set }
     
     func rearrangeEventsBySwapping(firstEvent firstIndex: Int, andSecondEvent secondIndex: Int)
-    func prepareNewQuizSet() -> [Event]
+    func prepareEventData(_ rawEventCollection: [[String: AnyObject]]) -> [Event]
+    func prepareNewEventSet() throws -> [Event]
     func isOrderCorrect() -> Bool
-    init() throws
-}
-
-struct HaloEvent: Event {
-    var description: String
-    var year: Int
-    //var link: URL
+    init(withEventFile fileName: String, ofType type: String) throws
 }
 
 class HaloEventProvider: EventDataProvider {
     var currentEventSet: [Event]
     var totalEventSet: [Event]
-    var correctEventOrderByYear: [Int]
+    var correctEventOrderByYear: [Float]
     
-    required init() throws {
-        let event1 = HaloEvent(description: "The ORION Project is re-initiated. The first successful batch of augmentees are code-named \"SPARTANs.\"", year: 2491)
-        let event2 = HaloEvent(description: "A young boy named John is born.", year: 2511)
-        let event3 = HaloEvent(description: "Following the war against the Covenant, the SPARTAN-IV Program is greenlit.", year: 2553)
-        let event4 = HaloEvent(description: "The UNSC Infinity is officially commissioned.", year: 2557)
+    required init(withEventFile fileName: String, ofType type: String) throws {
+        self.currentEventSet = [Event]()
+        self.totalEventSet = [Event]()
+        self.correctEventOrderByYear = [Float]()
         
-        self.totalEventSet = [event1, event2, event3, event4]
-        self.correctEventOrderByYear = self.totalEventSet.flatMap { event in event.year }
         
-        guard let shuffledEvents = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: self.totalEventSet) as? [Event] else {
-            throw DataError.unableToShuffleData
+        guard let path = Bundle.main.path(forResource: fileName, ofType: type) else {
+            throw DataError.unableToFindFile
         }
         
-        self.currentEventSet = shuffledEvents
+        guard let rawData = NSArray(contentsOfFile: path) as? [[String: AnyObject]] else {
+            throw DataError.unableToConvertStringToArray
+        }
+        
+        self.totalEventSet = prepareEventData(rawData)
+
+        do {
+            self.currentEventSet = try prepareNewEventSet()
+        } catch (let error) {
+            throw error
+        }
+        
+        self.correctEventOrderByYear = self.currentEventSet.flatMap({ event in event.year }).sorted()
     }
     
     func rearrangeEventsBySwapping(firstEvent firstIndex: Int, andSecondEvent secondIndex: Int) {
@@ -72,14 +71,45 @@ class HaloEventProvider: EventDataProvider {
     }
     
     func isOrderCorrect() -> Bool {
-        if currentEventSet.flatMap({ event in event.year}) == correctEventOrderByYear {
+        if currentEventSet.flatMap({ event in event.year }) == correctEventOrderByYear {
             return true
         }
         return false
     }
     
-    func prepareNewQuizSet() -> [Event] {
-        return self.currentEventSet
+    func prepareEventData(_ rawEventCollection: [[String: AnyObject]]) -> [Event] {
+        var eventCollection = [Event]()
+        for rawEvent in rawEventCollection {
+            if let description = rawEvent["description"] as? String, let year = rawEvent["year"] as? Float {
+                let event = Event(description: description, year: year)
+                eventCollection.append(event)
+            } else {
+                // Either the description or the year ended up being nil, skipping this one
+                continue
+            }
+        }
+        
+        return eventCollection
+    }
+    
+    func prepareNewEventSet() throws -> [Event] {
+        var arrayOfEventIndices = [Int]()
+        var arrayOfEvents = [Event]()
+        while arrayOfEventIndices.count < 4 {
+            let randomIndex = GKRandomSource.sharedRandom().nextInt(upperBound: totalEventSet.count)
+            if arrayOfEventIndices.index(of: randomIndex) != nil {
+                continue
+            }
+            
+            arrayOfEventIndices.append(randomIndex)
+            arrayOfEvents.append(totalEventSet[randomIndex])
+        }
+        
+        guard let randomizedEvents = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: arrayOfEvents) as? [Event] else {
+            throw DataError.unableToShuffleData
+        }
+        
+        return randomizedEvents
     }
     
 }
