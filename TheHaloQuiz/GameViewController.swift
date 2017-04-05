@@ -45,6 +45,7 @@ class GameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // put this in viewWillAppear because I don't want there to be white boxes as the events load
         updateEvents()
+        initiateCountdown()
     }
     
     override func viewDidLoad() {
@@ -84,7 +85,8 @@ class GameViewController: UIViewController {
     @IBAction func moveEvent(_ sender: UIButton) {
         switch sender.tag {
             case 0, 1: eventProvider.rearrangeEventsBySwapping(firstEvent: 0, andSecondEvent: 1)
-            case 2, 3: eventProvider.rearrangeEventsBySwapping(firstEvent: 1, andSecondEvent: 2)
+            case 2, 3:
+                eventProvider.rearrangeEventsBySwapping(firstEvent: 1, andSecondEvent: 2)
             case 4, 5: eventProvider.rearrangeEventsBySwapping(firstEvent: 2, andSecondEvent: 3)
             default: fatalError("Hit a button that doesn't have a tag or one we don't expect")
         }
@@ -105,6 +107,7 @@ class GameViewController: UIViewController {
                 nextButton.isUserInteractionEnabled = false
                 
                 instructionText.isHidden = false
+                initiateCountdown()
             } catch (let description) {
                 fatalError("\(description)")
             }
@@ -117,16 +120,18 @@ class GameViewController: UIViewController {
         correctAnswers = 0
         currentRound = 1
         
+        nextButton.isHidden = true
+        nextButton.isUserInteractionEnabled = false
+        
         updateEvents()
     }
     
     // MARK: Game helper methods
     
     func updateEvents() {
-        var index = 0
-        for label in questionLabels {
-            label.text = eventProvider.currentEventSet[index].description
-            index += 1
+        for index in 0...3 {
+            let tag = questionLabels[index].tag
+            questionLabels[index].text = eventProvider.currentEventSet[tag].description
         }
     }
     
@@ -137,28 +142,29 @@ class GameViewController: UIViewController {
     // MARK: Timer methods
     
     func initiateCountdown() {
-        countDown = 60
-        timerLabel.text = String(countDown)
+        countDown = 5
+        timerLabel.text = "1:00"
         timerLabel.isHidden = false
-//        startTimer()
+        startTimer()
     }
     
-//    func startTimer() {
-//        gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateClock(_:)), userInfo: nil, repeats: true)
-//    }
-//    
-//    func updateClock() {
-//        countDown -= 1
-//        if countDown < 0 {
-//            gameTimer?.invalidate()
-//            questionTimeout()
-//        }
-//        else {
-//            timerLabel.text = String(countDown)
-//        }
-//        if countDown % 60 == 0 {
-//            let minutes = countDown / 60
-//        }
-//    }
-//
+    func startTimer() {
+        gameTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+            (timer) in
+            if self.countDown > 0 {
+                self.countDown -= 1
+                self.timerLabel.text = "\(self.countDown)"
+            } else {
+                self.gameTimer?.invalidate()
+                
+                self.timerLabel.isHidden = true
+                self.instructionText.isHidden = true
+                
+                // the countdown ran out, counts as wrong
+                self.nextButton.setBackgroundImage(self.incorrectButtonImage, for: .normal)
+                self.nextButton.isHidden = false
+                self.nextButton.isUserInteractionEnabled = true
+            }
+        }
+    }
 }
