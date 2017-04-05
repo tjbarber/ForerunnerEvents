@@ -14,12 +14,15 @@ class GameViewController: UIViewController {
     @IBOutlet var actionButtons: [UIButton]!
     @IBOutlet weak var instructionText: UILabel!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
 
     let eventProvider: HaloEventProvider
     let correctButtonImage: UIImage?
     let incorrectButtonImage: UIImage?
     let roundsPerGame: Int = 6
     
+    var gameTimer: Timer?
+    var countDown: Int = 60
     var currentRound: Int = 1
     var correctAnswers: Int = 0
 
@@ -67,9 +70,6 @@ class GameViewController: UIViewController {
             
             nextButton.isHidden = false
             nextButton.isUserInteractionEnabled = true
-            
-            print(eventProvider.currentEventSet)
-            print(eventProvider.correctEventOrderByYear)
         }
     }
     
@@ -133,5 +133,32 @@ class GameViewController: UIViewController {
     func displayScore() {
         performSegue(withIdentifier: "scoreSegue", sender: self)
     }
-
+    
+    // MARK: Timer methods
+    
+    func initiateCountdown() {
+        countDown = 60
+        timerLabel.text = String(countDown)
+        timerLabel.isHidden = false
+//        startTimer()
+    }
+    
+//    func startTimer() {
+//        gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateClock(_:)), userInfo: nil, repeats: true)
+//    }
+//    
+//    func updateClock() {
+//        countDown -= 1
+//        if countDown < 0 {
+//            gameTimer?.invalidate()
+//            questionTimeout()
+//        }
+//        else {
+//            timerLabel.text = String(countDown)
+//        }
+//        if countDown % 60 == 0 {
+//            let minutes = countDown / 60
+//        }
+//    }
+//
 }

@@ -123,7 +123,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="2"/>
+                                        <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -206,6 +206,15 @@
                                 <color key="textColor" red="0.1176470588" green="0.37703683035714286" blue="0.56827457545714277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="010-1J-bP9">
+                                <rect key="frame" x="141.66666666666669" y="618" width="130.66666666666669" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="lyS-Nb-2TW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -221,12 +230,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="lWE-OS-oQw" secondAttribute="trailing" constant="20" id="Hb1-JT-8Vi"/>
                             <constraint firstItem="0U9-R2-8Sz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="Iti-de-aVN"/>
                             <constraint firstItem="6QR-0V-Gts" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iv3-is-zXt"/>
+                            <constraint firstItem="6QR-0V-Gts" firstAttribute="top" secondItem="010-1J-bP9" secondAttribute="bottom" constant="14" id="LmG-bc-nzN"/>
                             <constraint firstItem="0U9-R2-8Sz" firstAttribute="leading" secondItem="V1o-jb-lGQ" secondAttribute="trailing" constant="-5" id="N5X-id-bwv"/>
                             <constraint firstItem="ZJt-nJ-1GI" firstAttribute="top" secondItem="q6H-M5-Kcm" secondAttribute="bottom" id="P9h-Ay-sdc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6QR-0V-Gts" secondAttribute="bottom" constant="25.666666666666629" id="RDp-GH-L1o"/>
                             <constraint firstItem="ZJt-nJ-1GI" firstAttribute="leading" secondItem="MKk-uM-mLq" secondAttribute="trailing" constant="-5" id="TZB-0u-tJA"/>
                             <constraint firstItem="MKk-uM-mLq" firstAttribute="top" secondItem="0U9-R2-8Sz" secondAttribute="bottom" constant="20" id="Xas-ay-Rx6"/>
                             <constraint firstItem="BfF-Ja-GMn" firstAttribute="top" secondItem="ZJt-nJ-1GI" secondAttribute="bottom" constant="20" id="Zp9-Cj-nPt"/>
+                            <constraint firstItem="010-1J-bP9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a0F-WJ-dfj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0U9-R2-8Sz" secondAttribute="trailing" constant="20" id="bGN-83-Nav"/>
                             <constraint firstItem="V1o-jb-lGQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="ey5-Cg-zhs"/>
                             <constraint firstItem="4Ko-ga-T2v" firstAttribute="top" secondItem="xpd-Zb-tBO" secondAttribute="bottom" id="gBB-zf-Cxm"/>
@@ -243,6 +254,7 @@
                     <connections>
                         <outlet property="instructionText" destination="6QR-0V-Gts" id="7Uz-Uz-nTE"/>
                         <outlet property="nextButton" destination="l2z-2d-snB" id="O7p-TI-LQ2"/>
+                        <outlet property="timerLabel" destination="010-1J-bP9" id="S6d-Ec-VZV"/>
                         <outletCollection property="questionLabels" destination="V1o-jb-lGQ" collectionClass="NSMutableArray" id="ZYb-wD-Bf1"/>
                         <outletCollection property="questionLabels" destination="MKk-uM-mLq" collectionClass="NSMutableArray" id="UKJ-gz-hsv"/>
                         <outletCollection property="questionLabels" destination="BfF-Ja-GMn" collectionClass="NSMutableArray" id="Nmd-0Y-7I3"/>
@@ -258,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="249"/>
+            <point key="canvasLocation" x="-1.4492753623188408" y="248.64130434782609"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="Xai-kY-WuV">
