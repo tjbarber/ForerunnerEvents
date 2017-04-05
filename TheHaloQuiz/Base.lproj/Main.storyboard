@@ -54,9 +54,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHm-KW-gHu" userLabel="Entry 2">
                                 <rect key="frame" x="40" y="149" width="334" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKk-uM-mLq" userLabel="Entry 2">
+                                    <label opaque="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKk-uM-mLq" userLabel="Entry 2">
                                         <rect key="frame" x="10" y="0.0" width="279" height="90"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="ZQL-OG-uHr"/>
                                         </constraints>
@@ -76,6 +77,9 @@
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ZPZ-rH-OVt" appends="YES" id="Kwc-5I-qRR"/>
+                                        </connections>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6H-M5-Kcm" userLabel="Down">
                                         <rect key="frame" x="296" y="0.0" width="38" height="45"/>
@@ -123,9 +127,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKD-pp-DAz" userLabel="Entry 3">
                                 <rect key="frame" x="40" y="261" width="334" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfF-Ja-GMn" userLabel="Entry 3">
+                                    <label opaque="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfF-Ja-GMn" userLabel="Entry 3">
                                         <rect key="frame" x="10" y="0.0" width="279" height="90"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="WMX-uX-baV"/>
                                         </constraints>
@@ -139,6 +144,9 @@
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="XmA-IZ-at0" appends="YES" id="Emw-VS-nJA"/>
+                                        </connections>
                                     </label>
                                     <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpd-Zb-tBO" userLabel="Down">
                                         <rect key="frame" x="296" y="0.0" width="38" height="45"/>
@@ -201,9 +209,10 @@
                                             <action selector="moveEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOl-dD-EiP"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYN-c5-jzr" userLabel="Entry 4">
+                                    <label opaque="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYN-c5-jzr" userLabel="Entry 4">
                                         <rect key="frame" x="10" y="0.0" width="279" height="90"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
                                         <attributedString key="attributedText">
                                             <fragment content="Entry 4">
                                                 <attributes>
@@ -214,6 +223,9 @@
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="yvh-0t-5cm" appends="YES" id="RmA-N8-yHI"/>
+                                        </connections>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,9 +248,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-4h-cRH" userLabel="Entry 1">
                                 <rect key="frame" x="40" y="38" width="334" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1o-jb-lGQ" userLabel="Entry 1">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1o-jb-lGQ" userLabel="Entry 1">
                                         <rect key="frame" x="10" y="0.0" width="279" height="90"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="7fO-6W-Zyz"/>
                                         </constraints>
@@ -258,6 +271,9 @@
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="VpU-ut-3Gm" appends="YES" id="wvc-4n-i2V"/>
+                                        </connections>
                                     </label>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U9-R2-8Sz" userLabel="Down">
                                         <rect key="frame" x="296" y="0.0" width="38" height="90"/>
@@ -290,6 +306,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="l2z-2d-snB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7cE-FT-vHd"/>
                             <constraint firstItem="6QR-0V-Gts" firstAttribute="top" secondItem="l2z-2d-snB" secondAttribute="bottom" constant="20" id="9OB-jb-bq1"/>
@@ -332,8 +349,86 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VpU-ut-3Gm" userLabel="Tap Gesture Recognizer for Event 1">
+                    <connections>
+                        <action selector="eventTapped:" destination="BYZ-38-t0r" id="2MK-th-oIO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZPZ-rH-OVt" userLabel="Tap Gesture Recognizer for Event 2">
+                    <connections>
+                        <action selector="eventTapped:" destination="BYZ-38-t0r" id="MHq-Ae-FGt"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XmA-IZ-at0" userLabel="Tap Gesture Recognizer for Event 3">
+                    <connections>
+                        <action selector="eventTapped:" destination="BYZ-38-t0r" id="agn-6T-xXQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yvh-0t-5cm" userLabel="Tap Gesture Recognizer for Event 4">
+                    <connections>
+                        <action selector="eventTapped:" destination="BYZ-38-t0r" id="c3h-N9-Rtc"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1.4492753623188408" y="248.64130434782609"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="Nhj-xr-ADW">
+            <objects>
+                <viewController id="DB5-KT-CMg" customClass="InfoViewController" customModule="TheHaloQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xfx-aD-7WF"/>
+                        <viewControllerLayoutGuide type="bottom" id="hGj-CL-B5l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hq4-jo-AwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojg-6J-Jd2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbk-QM-KQm">
+                                        <rect key="frame" x="362" y="36" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="6D6-m4-QVh"/>
+                                            <constraint firstAttribute="width" constant="32" id="8cd-MI-0B4"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="close_button"/>
+                                        <connections>
+                                            <action selector="closeInformationView:" destination="DB5-KT-CMg" eventType="touchUpInside" id="rJf-6T-7yv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nbk-QM-KQm" secondAttribute="trailing" constant="20" id="F0C-VB-I87"/>
+                                    <constraint firstAttribute="height" constant="90" id="RPb-rE-Rhz"/>
+                                    <constraint firstItem="nbk-QM-KQm" firstAttribute="top" secondItem="Ojg-6J-Jd2" secondAttribute="top" constant="36" id="sbh-Ow-gb1"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hA-E7-wXG">
+                                <rect key="frame" x="0.0" y="90" width="414" height="646"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.14117647059999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ojg-6J-Jd2" firstAttribute="top" secondItem="hq4-jo-AwZ" secondAttribute="top" id="1FI-p2-bJq"/>
+                            <constraint firstItem="Ojg-6J-Jd2" firstAttribute="leading" secondItem="hq4-jo-AwZ" secondAttribute="leading" id="EpU-vy-gHN"/>
+                            <constraint firstAttribute="trailing" secondItem="4hA-E7-wXG" secondAttribute="trailing" id="VR5-4F-C0d"/>
+                            <constraint firstAttribute="trailing" secondItem="Ojg-6J-Jd2" secondAttribute="trailing" id="aHL-63-80N"/>
+                            <constraint firstItem="4hA-E7-wXG" firstAttribute="top" secondItem="Ojg-6J-Jd2" secondAttribute="bottom" id="mnm-sr-hdL"/>
+                            <constraint firstItem="4hA-E7-wXG" firstAttribute="leading" secondItem="hq4-jo-AwZ" secondAttribute="leading" id="q0d-A3-kxg"/>
+                            <constraint firstItem="hGj-CL-B5l" firstAttribute="top" secondItem="4hA-E7-wXG" secondAttribute="bottom" id="r8y-Do-Dfs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="informationWebView" destination="4hA-E7-wXG" id="8Uv-Zw-ib7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YE4-ey-Lwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857.97101449275374" y="329.34782608695656"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="Xai-kY-WuV">
@@ -395,10 +490,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGp-Ug-QZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Gqp-TB-0ie" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="757.97101449275374" y="249.45652173913047"/>
+            <point key="canvasLocation" x="858" y="-399"/>
         </scene>
     </scenes>
     <resources>
+        <image name="close_button" width="85" height="85"/>
         <image name="down_full" width="52" height="152"/>
         <image name="down_half" width="52" height="76"/>
         <image name="next_round_success" width="186" height="47"/>

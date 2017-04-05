@@ -126,6 +126,10 @@ class GameViewController: UIViewController {
         updateEvents()
     }
     
+    @IBAction func eventTapped(_ sender: Any) {
+        print("this works")
+    }
+    
     // MARK: Game helper methods
     
     func updateEvents() {
@@ -158,7 +162,7 @@ class GameViewController: UIViewController {
                 self.gameTimer?.invalidate()
                 
                 self.timerLabel.isHidden = true
-                self.instructionText.isHidden = true
+                self.instructionText.text = "Tap an event for more information."
                 
                 // the countdown ran out, counts as wrong
                 self.nextButton.setBackgroundImage(self.incorrectButtonImage, for: .normal)

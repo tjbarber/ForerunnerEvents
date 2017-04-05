@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ACB776DB1E9462AD00A6BEAE /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB776DA1E9462AD00A6BEAE /* ScoreViewController.swift */; };
+		ACB776DD1E95524700A6BEAE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB776DC1E95524700A6BEAE /* InfoViewController.swift */; };
 		ACE85B551E89E257001FF452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE85B541E89E257001FF452 /* AppDelegate.swift */; };
 		ACE85B571E89E257001FF452 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE85B561E89E257001FF452 /* GameViewController.swift */; };
 		ACE85B5A1E89E257001FF452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE85B581E89E257001FF452 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		ACB776DA1E9462AD00A6BEAE /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		ACB776DC1E95524700A6BEAE /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		ACE85B511E89E257001FF452 /* TheHaloQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheHaloQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE85B541E89E257001FF452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE85B561E89E257001FF452 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				ACE85B561E89E257001FF452 /* GameViewController.swift */,
 				ACB776DA1E9462AD00A6BEAE /* ScoreViewController.swift */,
 				ACEEFA0C1E8B05E4000E499F /* EventProvider.swift */,
+				ACB776DC1E95524700A6BEAE /* InfoViewController.swift */,
 				ACE85B581E89E257001FF452 /* Main.storyboard */,
 				ACE85B5B1E89E257001FF452 /* Assets.xcassets */,
 				ACE85B5D1E89E257001FF452 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				ACEEFA0D1E8B05E4000E499F /* EventProvider.swift in Sources */,
 				ACE85B551E89E257001FF452 /* AppDelegate.swift in Sources */,
 				ACB776DB1E9462AD00A6BEAE /* ScoreViewController.swift in Sources */,
+				ACB776DD1E95524700A6BEAE /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
