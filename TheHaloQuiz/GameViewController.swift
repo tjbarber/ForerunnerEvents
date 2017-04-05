@@ -8,9 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
 
-    @IBOutlet weak var startButton: UIButton!
     @IBOutlet var questionLabels: [UILabel]!
     @IBOutlet var actionButtons: [UIButton]!
     @IBOutlet weak var instructionText: UILabel!
@@ -34,12 +33,17 @@ class ViewController: UIViewController {
             fatalError("\(error)")
         }
         
+
         super.init(coder: aDecoder)
-        
     }
     
-    // create initializer that loads HaloEventProvider
+    // MARK: Override functions
 
+    override func viewWillAppear(_ animated: Bool) {
+        // put this in viewWillAppear because I don't want there to be white boxes as the events load
+        updateEvents()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,23 +53,33 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func startGame() {
-        startButton.isHidden = true
-        startButton.isUserInteractionEnabled = false
-        instructionText.isHidden = false
-        
-        for label in questionLabels {
-            label.isHidden = false
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if (motion == .motionShake) {
+            instructionText.isHidden = true
+            
+            if eventProvider.isOrderCorrect() {
+                correctAnswers += 1
+                nextButton.setBackgroundImage(correctButtonImage, for: .normal)
+            } else {
+                nextButton.setBackgroundImage(incorrectButtonImage, for: .normal)
+            }
+            
+            nextButton.isHidden = false
+            nextButton.isUserInteractionEnabled = true
+            
+            print(eventProvider.currentEventSet)
+            print(eventProvider.correctEventOrderByYear)
         }
-
-        for button in actionButtons {
-            button.isHidden = false
-            button.isUserInteractionEnabled = true
-        }
-
-        updateEvents()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "scoreSegue", let viewController = segue.destination as? ScoreViewController {
+            viewController.scoreString = "\(correctAnswers)/\(roundsPerGame)"
+        }
+    }
+    
+    // MARK: IBActions
 
     @IBAction func moveEvent(_ sender: UIButton) {
         switch sender.tag {
@@ -80,7 +94,7 @@ class ViewController: UIViewController {
     
     @IBAction func startNextRound(_ sender: Any) {
         if currentRound == roundsPerGame {
-            print("game over")
+            displayScore()
         } else {
             do {
                 eventProvider.currentEventSet = try eventProvider.prepareNewEventSet()
@@ -97,37 +111,27 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindToGame(segue: UIStoryboardSegue) {
+        // starting a new game
+        
+        correctAnswers = 0
+        currentRound = 1
+        
+        updateEvents()
+    }
+    
+    // MARK: Game helper methods
+    
     func updateEvents() {
         var index = 0
-
         for label in questionLabels {
             label.text = eventProvider.currentEventSet[index].description
             index += 1
         }
     }
     
-    func toggleDisplayOf(_ view: UIControl) {
-        view.isHidden = !(view.isHidden)
-        view.isUserInteractionEnabled = !(view.isUserInteractionEnabled)
-    }
-    
     func displayScore() {
-        
+        performSegue(withIdentifier: "scoreSegue", sender: self)
     }
 
-    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if (motion == .motionShake) {
-            instructionText.isHidden = true
-            
-            if eventProvider.isOrderCorrect() {
-                correctAnswers += 1
-                nextButton.setBackgroundImage(correctButtonImage, for: .normal)
-            } else {
-                nextButton.setBackgroundImage(incorrectButtonImage, for: .normal)
-            }
-            
-            nextButton.isHidden = false
-            nextButton.isUserInteractionEnabled = true
-        }
-    }
 }
