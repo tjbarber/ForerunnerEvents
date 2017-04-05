@@ -184,7 +184,7 @@ class GameViewController: UIViewController {
     // MARK: Timer methods
     
     func initiateCountdown() {
-        countDown = 5
+        countDown = 60
         timerLabel.text = "1:00"
         timerLabel.isHidden = false
         startTimer()
@@ -195,7 +195,7 @@ class GameViewController: UIViewController {
             (timer) in
             if self.countDown > 0 {
                 self.countDown -= 1
-                self.timerLabel.text = "\(self.countDown)"
+                self.timerLabel.text = "0:\(self.countDown)"
             } else {
                 // the countdown ran out, counts as wrong
                 self.checkAnswerAndUpdateDisplay(false)
