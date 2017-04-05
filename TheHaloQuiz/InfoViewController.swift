@@ -9,12 +9,18 @@
 import UIKit
 
 class InfoViewController: UIViewController {
+    
+    var url: URL?
 
     @IBOutlet weak var informationWebView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let url = url {
+            let pageRequest = URLRequest(url: url)
+            informationWebView.loadRequest(pageRequest)
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,7 +30,7 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func closeInformationView(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "unwindFromInformation", sender: self)
     }
 
     /*

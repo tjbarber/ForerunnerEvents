@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Installation_05</string>
 		<key>description</key>
 		<string>The Battle of Installation 05 begins</string>
 		<key>year</key>
@@ -11,58 +13,78 @@
 	<dict>
 		<key>description</key>
 		<string>John-117 is stranded in the hanger of the UNSC Forward Unto Dawn.</string>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Halo_3</string>
 		<key>year</key>
 		<real>2552.95</real>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Prophet_Of_Truth</string>
 		<key>description</key>
 		<string>The Arbiter kills the Prophet of Truth.</string>
 		<key>year</key>
 		<real>2552.94</real>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Halo_4</string>
 		<key>description</key>
 		<string>After over four years of drifting, John-117 wakes up from cryo sleep.</string>
 		<key>year</key>
 		<integer>2557</integer>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Jul_%27Mdama</string>
 		<key>description</key>
 		<string>Jul &apos;Mdama is killed by Jameson Locke in order to rescue Catherine Halsey</string>
 		<key>year</key>
 		<integer>2558</integer>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Battle_of_Onyx</string>
 		<key>description</key>
 		<string>The Battle of Onyx begins.</string>
 		<key>year</key>
 		<real>2552.92</real>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/2552</string>
 		<key>description</key>
 		<string>The High Prophet of Regret&apos;s fleet arrives at Earth.</string>
 		<key>year</key>
 		<real>2552.91</real>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/UNSC_Pillar_of_Autumn</string>
 		<key>description</key>
 		<string>The UNSC Pillar of Autumn arrives at Alpha Halo.</string>
 		<key>year</key>
 		<real>2552.9</real>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Reach</string>
 		<key>year</key>
 		<real>2552.8</real>
 		<key>description</key>
 		<string>Reach is glassed.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Cortana</string>
 		<key>year</key>
 		<real>2549</real>
 		<key>description</key>
 		<string> Cortana is created from Dr. Catherine Halsey&apos;s flash-cloned brain.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Rookie</string>
 		<key>year</key>
 		<real>2547.7</real>
 		<key>description</key>
@@ -71,64 +93,86 @@
 	<dict>
 		<key>year</key>
 		<real>2547.5</real>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/SPARTAN-II_Program</string>
 		<key>description</key>
 		<string>ONI Section Two publicly unveils the SPARTAN-II Program in order to boost morale.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Mjolnir_Powered_Assault_Armor/Mark_V</string>
 		<key>year</key>
 		<real>2542</real>
 		<key>description</key>
 		<string>MJOLNIR Mark V Armor is produced.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/UNSC_Spirit_of_Fire</string>
 		<key>year</key>
 		<real>2534</real>
 		<key>description</key>
 		<string>UNSC declares the UNSC Spirit of Fire and its crew KIA.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Catherine-B320</string>
 		<key>year</key>
 		<real>2530</real>
 		<key>description</key>
 		<string>Kat-320 is born on Monastir, New Harmony.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Edward_Buck</string>
 		<key>description</key>
 		<string>Edward Buck enlists in the UNSC Marine Corps.</string>
 		<key>year</key>
 		<integer>2528</integer>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/WINTER_CONTINGENCY</string>
 		<key>year</key>
 		<real>2526</real>
 		<key>description</key>
 		<string>The WINTER CONTINGENCY protocol is enacted by the UNSC.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/2525</string>
 		<key>description</key>
 		<string>Humanity comes into contact with the Covenant for the first time.</string>
 		<key>year</key>
 		<integer>2525</integer>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Emile-A239</string>
 		<key>description</key>
 		<string>Emile-A239 is born on Luxor, Eridanus II.</string>
 		<key>year</key>
 		<string>2523.3</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Halo:_First_Strike</string>
 		<key>year</key>
 		<real>2523.7</real>
 		<key>description</key>
 		<string>Spartan-IIs train on Reach, where they successfully capture a Marine base flag.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Catherine_Halsey</string>
 		<key>year</key>
 		<real>2515</real>
 		<key>description</key>
 		<string>Dr. Catherine Halsey becomes scientific advisor in the Office of Naval Intelligence.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/2142</string>
 		<key>description</key>
 		<string>The Covenant discover the Unggoy homeworld, Balaho.</string>
 		<key>year</key>
@@ -137,34 +181,46 @@
 	<dict>
 		<key>description</key>
 		<string>Humans settle on Luna, Mars, the Jovian Moons, and asteroids.</string>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/2080</string>
 		<key>year</key>
 		<integer>2080</integer>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/International_Society_of_Civil_Engineers</string>
 		<key>year</key>
 		<real>2021</real>
 		<key>description</key>
 		<string>The International Society of Civil Engineers is established on Earth.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/UNSC_Infinity</string>
 		<key>year</key>
 		<integer>2557</integer>
 		<key>description</key>
 		<string>The UNSC Infinity is officially commissioned.</string>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/SPARTAN-IV_program</string>
 		<key>description</key>
 		<string>Following the war against the Covenant, the SPARTAN-IV Program is greenlit.</string>
 		<key>year</key>
 		<real>2553</real>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/John-117</string>
 		<key>description</key>
 		<string>John-117 is born in Elysium City on Eridanus II.</string>
 		<key>year</key>
 		<integer>2511</integer>
 	</dict>
 	<dict>
+		<key>url</key>
+		<string>https://halo.wikia.com/wiki/Orion_Project</string>
 		<key>description</key>
 		<string>The ORION Project is re-initiated. </string>
 		<key>year</key>

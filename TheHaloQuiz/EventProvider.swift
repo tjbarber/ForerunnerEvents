@@ -18,6 +18,7 @@ enum DataError : Error {
 struct Event {
     var description: String
     var year: Float
+    var url: URL
 }
 
 protocol EventDataProvider {
@@ -80,8 +81,11 @@ class HaloEventProvider: EventDataProvider {
     func prepareEventData(_ rawEventCollection: [[String: AnyObject]]) -> [Event] {
         var eventCollection = [Event]()
         for rawEvent in rawEventCollection {
-            if let description = rawEvent["description"] as? String, let year = rawEvent["year"] as? Float {
-                let event = Event(description: description, year: year)
+            if let description = rawEvent["description"] as? String,
+                let year = rawEvent["year"] as? Float,
+                let urlString = rawEvent["url"] as? String,
+                let url = URL(string: urlString) {
+                let event = Event(description: description, year: year, url: url)
                 eventCollection.append(event)
             } else {
                 // Either the description or the year ended up being nil, skipping this one

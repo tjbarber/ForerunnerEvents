@@ -346,6 +346,7 @@
                         <outletCollection property="questionLabels" destination="V1o-jb-lGQ" collectionClass="NSMutableArray" id="ZYb-wD-Bf1"/>
                         <outletCollection property="actionButtons" destination="0U9-R2-8Sz" collectionClass="NSMutableArray" id="TJW-KO-x08"/>
                         <segue destination="kKc-iL-BTQ" kind="show" identifier="scoreSegue" animates="NO" id="ajN-ol-3fT"/>
+                        <segue destination="DB5-KT-CMg" kind="presentation" identifier="informationSegue" id="TI9-7l-z8c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -424,9 +425,11 @@
                     </view>
                     <connections>
                         <outlet property="informationWebView" destination="4hA-E7-wXG" id="8Uv-Zw-ib7"/>
+                        <segue destination="6Lq-Tt-CnM" kind="unwind" identifier="unwindFromInformation" unwindAction="unwindFromInformationWithSegue:" id="PhY-1k-z1M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YE4-ey-Lwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6Lq-Tt-CnM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="857.97101449275374" y="329.34782608695656"/>
         </scene>

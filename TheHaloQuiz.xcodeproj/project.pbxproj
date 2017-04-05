@@ -65,11 +65,11 @@
 				ACE85B541E89E257001FF452 /* AppDelegate.swift */,
 				ACE85B561E89E257001FF452 /* GameViewController.swift */,
 				ACB776DA1E9462AD00A6BEAE /* ScoreViewController.swift */,
-				ACEEFA0C1E8B05E4000E499F /* EventProvider.swift */,
 				ACB776DC1E95524700A6BEAE /* InfoViewController.swift */,
+				ACEEFA0C1E8B05E4000E499F /* EventProvider.swift */,
 				ACE85B581E89E257001FF452 /* Main.storyboard */,
-				ACE85B5B1E89E257001FF452 /* Assets.xcassets */,
 				ACE85B5D1E89E257001FF452 /* LaunchScreen.storyboard */,
+				ACE85B5B1E89E257001FF452 /* Assets.xcassets */,
 				ACE85B601E89E257001FF452 /* Info.plist */,
 				ACE85B661E89E923001FF452 /* EventData.plist */,
 			);

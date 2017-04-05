@@ -11,11 +11,10 @@ import UIKit
 class ScoreViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
-    var scoreString: String
+    var scoreString: String?
 
     
     required init?(coder aDecoder: NSCoder) {
-        self.scoreString = "0/6"
         super.init(coder: aDecoder)
     }
     
